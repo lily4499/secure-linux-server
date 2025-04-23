@@ -174,9 +174,9 @@ sudo chmod 600 /home/devopsadmin/.ssh/authorized_keys
 ---
 
 ### 1️⃣ `setup-firewall.sh`: Configure Firewall (UFW)
-Installs and enables UFW (Uncomplicated Firewall)
-Sets default policy to deny all incoming traffic
-Allows essential ports: SSH (22), HTTP (80), HTTPS (443)
+- Installs and enables UFW (Uncomplicated Firewall)
+- Sets default policy to deny all incoming traffic
+- Allows essential ports: SSH (22), HTTP (80), HTTPS (443)
 
 
 ```bash
@@ -203,9 +203,9 @@ sudo ufw status verbose
 ---
 
 ### 2️⃣ `secure-ssh.sh`: SSH Hardening
-Disables root login via SSH
-Disables password-based SSH authentication to enforce key-based login
-Restarts the SSH daemon to apply changes
+- Disables root login via SSH
+- Disables password-based SSH authentication to enforce key-based login
+- Restarts the SSH daemon to apply changes
 
 ```bash
 #!/bin/bash
@@ -236,8 +236,8 @@ If it works — you’re now logging in securely with SSH keys and a non-root us
 ---
 
 ### 3️⃣ `install-monitoring.sh`: Monitoring Tools
-Installs real-time system monitoring tools: htop, net-tools
-Installs and starts fail2ban to ban IPs with repeated failed login attempts
+- Installs real-time system monitoring tools: htop, net-tools
+- Installs and starts fail2ban to ban IPs with repeated failed login attempts
 
 ```bash
 #!/bin/bash
@@ -258,11 +258,11 @@ sudo fail2ban-client status
 ---
 
 ### 4️⃣ `harden-system.sh`: System Hardening + AppArmor
-Installs and configures:
-  unattended-upgrades for automatic security patching
-  AppArmor for mandatory access control
-Disables unused services (e.g., avahi-daemon, cups)
-Applies kernel-level network hardening via /etc/sysctl.d
+- Installs and configures:
+  . unattended-upgrades for automatic security patching
+  . AppArmor for mandatory access control
+- Disables unused services (e.g., avahi-daemon, cups)
+- Applies kernel-level network hardening via /etc/sysctl.d
 
 
 ```bash
