@@ -17,7 +17,7 @@ Automate the setup of a hardened Ubuntu server suitable for hosting applications
 
 ## 📁 Project Structure
 
-```
+```bash
 secure-linux-server/
 ├── scripts/
 │   ├── setup-firewall.sh
