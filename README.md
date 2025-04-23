@@ -1,5 +1,20 @@
 # secure-linux-server
 
+ #Linux OS Deployment and Networking Security
+📝 Project: Secure Linux Web Server Setup
+📁 Description:
+Automate the deployment of an Ubuntu server that includes:
+
+Firewall rules with ufw / iptables
+
+Secured SSH access
+
+Monitoring setup (e.g., using top, htop, netstat, fail2ban)
+
+Network hardening and SELinux/AppArmor config
+
+🔗 Technologies: Ubuntu, Shell scripting, UFW, fail2ban
+✅ Outcome: Hardened Linux environment for secure application hosting
 ---
 
 ```markdown
@@ -146,7 +161,6 @@ aws ec2 run-instances \
   --key-name ec2-devops-key \                          # Make sure this key exists
   --security-group-ids sg-091906568d27d3894 \          # Should allow SSH (port 22)
   --subnet-id subnet-062bafb72ff1b9c71 \
-  --iam-instance-profile Name=CodeDeployEC2Role \
   --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=Ubuntu-Server}]'
 ```
 
